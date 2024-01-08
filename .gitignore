@@ -3,7 +3,7 @@
 ################################################################################
 
 /.vs/BlazorAppNetCore8/FileContentIndex
-/BlazorAppNetCore8/BlazorAppNetCore8/bin/Debug/net8.0
+/BlazorAppNetCore8/BlazorAppNetCore8/bin
 /BlazorAppNetCore8/BlazorAppNetCore8/obj
-/BlazorAppNetCore8/BlazorAppNetCore8.Client/bin/Debug/net8.0
+/BlazorAppNetCore8/BlazorAppNetCore8.Client/bin
 /BlazorAppNetCore8/BlazorAppNetCore8.Client/obj
