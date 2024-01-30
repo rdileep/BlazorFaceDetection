@@ -1,15 +1,18 @@
-const video = document.getElementById("video");
-console.log("INITIATING FACE API");
-console.log(faceapi.nets);
+const video = document.getElementById('video')
+
 Promise.all([
-    faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
-    faceapi.nets.faceLandmark68Net.loadFromUri('/models'),
-    faceapi.nets.faceRecognitionNet.loadFromUri('/models'),
-    faceapi.nets.faceExpressionNet.loadFromUri('/models')
+    faceapi.nets.tinyFaceDetector.loadFromUri('/fileserve'),
+    faceapi.nets.faceLandmark68Net.loadFromUri('/fileserve'),
+    faceapi.nets.faceRecognitionNet.loadFromUri('/fileserve'),
+    faceapi.nets.faceExpressionNet.loadFromUri('/fileserve')
 ]).then(startVideo)
 
 function startVideo() {
-    navigator.getUserMedia({ video: {} }, stream => video.srcObject = stream, err => console.error(err));
+    navigator.getUserMedia(
+        { video: {} },
+        stream => video.srcObject = stream,
+        err => console.error(err)
+    )
 }
 
 video.addEventListener('play', () => {

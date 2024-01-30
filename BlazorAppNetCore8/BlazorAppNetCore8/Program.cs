@@ -14,6 +14,8 @@ namespace BlazorAppNetCore8
                 .AddInteractiveServerComponents()
                 .AddInteractiveWebAssemblyComponents();
 
+            builder.Services.AddControllersWithViews();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -33,11 +35,14 @@ namespace BlazorAppNetCore8
             app.UseStaticFiles();
             app.UseAntiforgery();
 
+            
+
             app.MapRazorComponents<App>()
                 .AddInteractiveServerRenderMode()
                 .AddInteractiveWebAssemblyRenderMode()
                 .AddAdditionalAssemblies(typeof(Counter).Assembly);
 
+            app.MapControllers();
             app.Run();
         }
     }
