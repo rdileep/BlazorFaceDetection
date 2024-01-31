@@ -9,15 +9,17 @@
     <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="BlazorAppNetCore8.styles.css" />
     <link rel="icon" type="image/png" href="favicon.png" />
+
+
     <HeadOutlet />
 </head>
 
 <body>
     <Routes />
     <script src="_framework/blazor.web.js"></script>
-    <script src="/scripts/face-api/dist/face-api.min.js"></script>
-    <script src="/scripts/app-scripts.js"></script>
-    <script src="/models/test.js"></script>
+    @* <script defer src="/scripts/face-api/dist/face-api.min.js"></script> *@
+    <script defer src="/scripts/face-api-v2/dist/face-api.js"></script>
+    <script defer src="/scripts/app-scripts.js"></script>
 </body>
 
 </html>
