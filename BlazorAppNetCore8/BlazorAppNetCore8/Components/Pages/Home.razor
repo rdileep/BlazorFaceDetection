@@ -1,7 +1,14 @@
 ﻿@page "/"
 
 <PageTitle>Face Detection</PageTitle>
+@* <PageScript defer src="./Components/Pages/Home.razor.js"></PageScript> *@
 
 <h1>Face Detection</h1>
+<div id="divVideoArea" style="width:720px; height:560px;">
+    <video id="video" width="720" height="560" autoplay muted controls style="position:absolute;"></video>
+</div>
+<h4>Logs</h4>
+<div id="divLogArea" style="width:720px; height:560px; overflow-wrap:anywhere;">
 
-<video id="video" width="720" height="560" autoplay muted></video>
+</div>
+
